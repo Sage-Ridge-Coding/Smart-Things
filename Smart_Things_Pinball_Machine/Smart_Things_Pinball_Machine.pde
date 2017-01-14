@@ -62,6 +62,5 @@ PFont f;
   drawGUI();
   doInteraction();
   doPhysics();
-  // score += 1;
 
 }

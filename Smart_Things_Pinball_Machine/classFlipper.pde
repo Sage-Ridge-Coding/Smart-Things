@@ -49,7 +49,9 @@ class Flipper {
 
   // Turn the motor on or off
   void toggleMotor() {
-    joint.enableMotor(!joint.isMotorEnabled());
+    //joint.enableMotor(!joint.isMotorEnabled());
+    if (joint.getMotorSpeed() > 0.0 || joint.getMotorSpeed() < 0.0) {joint.setMotorSpeed(0);}
+    else if (joint.getMotorSpeed() == 0.0) {joint.setMotorSpeed(10);}
   }
 
   boolean motorOn() {
